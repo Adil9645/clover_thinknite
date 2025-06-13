@@ -1,0 +1,115 @@
+@import "@carbon/styles/css/styles.css";
+$gray-light: #f4f4f4;
+$text-secondary: #6f6f6f;
+$text-dark: #525252;
+@import "@carbon/styles/css/styles.css";
+
+html {
+  font-size: 18px; /* Default is usually 16px */
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif; /* Or whatever you're using */
+}
+
+
+
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: $text-secondary;
+    margin-top: 0.5rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: $text-dark;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  }
+}
+
+.uploader {
+  background: $gray-light;
+  padding: 2rem;
+  border-radius: 0.5rem;
+
+  .toggleGroup {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .analyzeBtn {
+    margin-top: 1.5rem;
+  }
+}
+
+.videoUploadContainer {
+  margin-top: 1rem;
+
+  .uploadLabel {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .uploadBox {
+    border: 2px dashed #d0d0d0;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+
+  .uploadIcon {
+    width: 32px;
+    height: 32px;
+    color: #8d8d8d;
+  }
+
+  .supportedText {
+    font-size: 0.85rem;
+    color: #8d8d8d;
+  }
+
+  .hiddenInput {
+    display: none;
+  }
+
+  .selectedFile {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #0f62fe;
+  }
+}

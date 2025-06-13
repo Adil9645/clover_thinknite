@@ -1,0 +1,194 @@
+// Colors
+$primary-gradient: linear-gradient(90deg, #6f4ef2, #ac68f2);
+$background-light: #f8f9fa;
+$box-background: #ffffff;
+$border-color: #e0e0e0;
+$gray-text: #6f6f6f;
+$primary-text: #262626;
+$blue: #0f62fe;
+
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+.container {
+  font-family: "Inter", sans-serif;
+  background: $background-light;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+
+  .header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: $primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: $gray-text;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 0.9rem;
+      color: $primary-text;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .uploader {
+    max-width: 700px;
+    margin: 0 auto;
+    background: $box-background;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid $border-color;
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .toggleGroup {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      button {
+        flex: 1;
+        font-weight: 900;
+        border: none;
+        height: 40px;
+        text-align: center;
+        border-radius: 6px;
+        color: black;
+        background-color: rgba(234, 229, 229, 0.961);
+
+        &.active {
+          background-color: #0043ce;
+          color: white;
+        }
+
+        &:hover {
+          background-color: #0f62fe;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      font-size: 1rem;
+      padding: 1rem;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      resize: vertical;
+      font-family: "Inter", sans-serif;
+    }
+
+    .analyzeBtn {
+      margin-top: 1.5rem;
+      width: 50%;
+      background: $primary-gradient;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 8px;
+      padding: 0.75rem;
+      border: none;
+
+      &:disabled {
+        background: #c6c6c6;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .summaryBox {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f4f4f4;
+    border-left: 5px solid #6f4ef2;
+    border-radius: 8px;
+    white-space: pre-wrap;
+
+    h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #262626;
+    }
+
+    pre {
+      font-size: 1rem;
+      color: #4d4d4d;
+      margin: 0;
+    }
+  }
+
+  .videoUploadContainer {
+    margin-top: 1rem;
+
+    .uploadLabel {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .uploadBox {
+      border: 2px dashed $border-color;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #f4f4f4;
+      }
+    }
+
+    .uploadIcon {
+      width: 40px;
+      height: 40px;
+      color: $gray-text;
+    }
+
+    .supportedText {
+      font-size: 0.85rem;
+      color: $gray-text;
+    }
+
+    .active {
+      background-color: #0043ce !important;
+      color: white !important;
+    }
+
+    .hiddenInput {
+      display: none;
+    }
+
+    .selectedFile {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: $blue;
+    }
+  }
+}
