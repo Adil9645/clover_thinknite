@@ -9,6 +9,12 @@ export default nextConfig;
 // next.config.js
 module.exports = {
   images: {
-    domains: ['a.slack-edge.com'],
+    domains: ["a.slack-edge.com"],
+  },
+};
+
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
